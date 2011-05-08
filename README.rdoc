@@ -18,6 +18,7 @@ NOTE: IMO I would use the to_csv plugin; it's more compatible. (http://github.co
   @users.to_xls(:headers => false)
   @users.to_xls(:except => [:last_name, :role])
   @users.to_xls(:methods => :admin?)
+  @users.to_xls(:headers_mapping => { :last_name => "family name", :address => "living place" })
 
 
 == Real life example

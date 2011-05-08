@@ -39,7 +39,7 @@ class Array
         self.each do |item|
           output << "<Row>"
           columns.each do |column|
-            value = item.provide_value column
+            value = item.send column
             #output << "<Cell><Data ss:Type=\"#{value.is_a?(Integer) ? 'Number' : 'String'}\">#{value}</Data></Cell>"
             if value.is_a? Integer
               output << "<Cell><Data ss:Type=\"Number\">#{value}</Data></Cell>"
